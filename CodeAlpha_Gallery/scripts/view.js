@@ -2,7 +2,7 @@ import { renderFavoritesPage, renderHomePage, renderPhotoLightBox } from "./mode
 import "./model.js";
 import "./controller.js";
 
-if (window.location.pathname === '/favorites.html') {
+if (window.location.pathname.endsWith('/favorites.html')) {
   renderFavoritesPage();
   renderPhotoLightBox();
 } else {
