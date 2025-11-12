@@ -88,13 +88,10 @@ function setLocalResult() {
 }
 
 function getLocalResult() {
-  if (localStorage) {
-    result = localStorage.getItem('local-result');
-  } else {
-    result = '';
-  }
+  result = localStorage.getItem('local-result') || '';
   document.querySelector('p').innerText = result || '00';
 }
+
 
 getLocalResult();
 document.querySelectorAll('button').forEach(item => item.addEventListener('click', () => setLocalResult()))
