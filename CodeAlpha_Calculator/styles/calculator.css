@@ -88,3 +88,11 @@
     svg.light {
       color: black;
     }
+
+/* Remove tap highlight on mobile */
+* {
+  -webkit-tap-highlight-color: transparent; /* Safari & Chrome on iOS/Android */
+}
+button:focus, a:focus {
+  outline: none;
+}
