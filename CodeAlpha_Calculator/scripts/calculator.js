@@ -25,13 +25,19 @@ const deleteBtn = document.querySelector('.delete');
 
 
 function appendValue(val) {
-  if (isResult) {
+  const isNumberOrDot = /[0-9.]/.test(val);
+
+  if (isResult && isNumberOrDot) {
     result = '';
     isResult = false;
+  } else if (isResult && !isNumberOrDot) {
+    isResult = false;
   }
+
   result += val;
   document.querySelector('p').innerText = result;
 }
+
 
 one.addEventListener('click', () => appendValue('1'));
 two.addEventListener('click', () => appendValue('2'));
