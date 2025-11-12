@@ -66,7 +66,13 @@ rightPar.addEventListener('click', () => appendValue(')'));
 
 equal.addEventListener('click', () => {
   try {
-    result = eval(result).toString();
+    let res = eval(result);
+
+    if (!Number.isInteger(res)) {
+      res = res.toFixed(2);
+    }
+
+    result = res.toString();
     document.querySelector('p').innerText = result;
     isResult = true;
   } catch {
@@ -75,6 +81,7 @@ equal.addEventListener('click', () => {
     isResult = false;
   }
 });
+
 
 clear.addEventListener('click', () => {
   result = '';
