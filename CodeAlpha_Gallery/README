@@ -1,0 +1,52 @@
+# Gallery Project
+
+A responsive image gallery built with **HTML, CSS, and JavaScript (MVC pattern)**.  
+Displays images in a clean grid layout, allows adding favorites, viewing full-size images, and filtering by category.
+
+## Features
+
+- Responsive grid layout using **CSS Grid**
+- Smooth hover effects (zoom and shadow)
+- Lightbox-style image preview modal
+- Add/Remove favorites with persistent storage
+- Category filter to show specific image types
+- Header navigation between **Home** and **Favorites**
+- Organized using the **MVC (Model–View–Controller)** architecture
+
+## File Structure
+
+CodeAlpha_Gallery/  
+├─ data/  
+│   ├─ images/  
+│   ├─ data.js  
+│   ├─ generate_captions.py  
+│   └─ images.json  
+│  
+├─ scripts/  
+│   ├─ model.js  
+│   ├─ view.js  
+│   └─ controller.js  
+│  
+├─ styles/  
+│   ├─ general.css  
+│   ├─ header.css  
+│   └─ home.css  
+│  
+├─ index.html  
+├─ favorites.html  
+└─ README.md  
+
+## How to Use
+
+1. Open `index.html` in your browser  
+2. Browse images in the **Home** tab  
+3. Click any image to open its full-size **preview modal**  
+4. Use the **Add to Favorites** button to save images you like  
+5. Go to the **Favorites** tab to view or remove saved images  
+6. Use the **category selector** to filter images by type  
+
+## Notes
+
+- Image data (title, description, category) is stored in `data.js`  
+- Favorites are saved using **localStorage**  
+- Follows the **MVC architecture** for better organization and scalability  

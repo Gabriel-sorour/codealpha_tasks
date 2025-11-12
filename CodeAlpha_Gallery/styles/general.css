@@ -1,0 +1,24 @@
+body {
+  background-color: #fff6ec;
+  margin: 0;
+  font-family: Caveat;
+  margin-top: 60px;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+  font-family: Caveat;
+  font-weight: bold;
+}
+
+ /* Remove tap highlight on mobile */
+* {
+  -webkit-tap-highlight-color: transparent; /* Safari & Chrome on iOS/Android */
+}
+button:focus, a:focus {
+  outline: none;
+}
