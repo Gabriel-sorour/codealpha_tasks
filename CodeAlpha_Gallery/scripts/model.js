@@ -141,7 +141,7 @@ export function renderPhotoLightBox() {
       xBtn.addEventListener('click', () => {
         document.querySelector('.js-light-box').classList.remove('display');
         document.querySelector('.js-photo-light-box').innerHTML = ``;
-        if (window.location.pathname === '/favorites.html') {
+        if (window.location.pathname.endsWith('/favorites.html')) {
           html = ``;
           renderFavoritesPage();
           renderPhotoLightBox();
